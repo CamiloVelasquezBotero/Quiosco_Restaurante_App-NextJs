@@ -1,15 +1,13 @@
 'use client'
 import useSWR from 'swr'
 import Logo from '@/components/ui/Logo'
-import React from 'react'
 import { OrderWithProducts } from '@/src/types'
-import path from 'path'
 import LatestOrderItem from '@/components/order/LatestOrderItem'
 
 export default function OrdersPage() {
     const url = '/orders/api'
     const fetcher = () => fetch(url).then(res => res.json()).then(data => data)
-    const { data, error, isLoading } = useSWR<OrderWithProducts[]>(url, fetcher, {
+    const { data, isLoading } = useSWR<OrderWithProducts[]>(url, fetcher, {
         refreshInterval: 1000, // Refescamos cada segundo
         revalidateOnFocus: false
     })

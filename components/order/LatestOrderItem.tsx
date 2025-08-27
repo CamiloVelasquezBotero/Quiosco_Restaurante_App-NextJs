@@ -1,4 +1,3 @@
-import { productSchema } from "@/src/schemaZod"
 import { OrderWithProducts } from "@/src/types"
 
 type LatestOrderItemProps = {

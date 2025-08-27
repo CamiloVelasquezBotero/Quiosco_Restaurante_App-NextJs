@@ -20,7 +20,7 @@ export default function ImageUpload({image}:{image: string | undefined}) { // Pu
             onSuccess={(result, { widget }) => { // instanciamos el resultado, y extraemos el widget
                 if(result.event === 'success') {
                     widget.close() // Cerramos el widget de cloudinary
-                    // @ts-ignore // Ingnoramso el error de TS en este result.info, ya que es error de cloudinary, por que si existen estas respuestas
+                    // @ts-expect-error // Ingnoramso el error de TS en este result.info, ya que es error de cloudinary, por que si existen estas respuestas
                     setImageUrl(result.info.secure_url) // Activamos previamente en  (nex.config.ts) para que acepte imagenes desde dominios
                 }
             }}

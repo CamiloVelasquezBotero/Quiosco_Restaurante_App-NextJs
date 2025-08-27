@@ -32,7 +32,7 @@ export const useStore = create<Store>((set, get) => ({
                 subtotal: 1 * product.price
             }]
         }
-        set((state) => ({ // Establecemos en el state
+        set(() => ({ // Establecemos en el state
             order: order
         }))
     },
@@ -55,7 +55,7 @@ export const useStore = create<Store>((set, get) => ({
         } : item)
     
 
-        set((state) => ({
+        set(() => ({
             order: order
         }))
     },

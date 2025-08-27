@@ -3,7 +3,7 @@ import ProductForm from "@/components/products/ProductForm"
 import GoBackButton from "@/components/ui/GoBackButton"
 import Heading from "@/components/ui/Heading"
 import { prisma } from "@/src/lib/prisma"
-import { notFound, redirect } from "next/navigation"
+import { notFound } from "next/navigation"
 
 async function getProductById(id:number) {
     const product = await prisma.product.findUnique({
@@ -19,9 +19,8 @@ async function getProductById(id:number) {
     return product
 }
 
-export default async function EditProductsPage({params}:{params: {id: string}}) {
-
-    const { id } = await params// Lo hacemos ocon await por qur next funciona por streaming 
+export default async function EditProductsPage({params}:{params: Promise<{id: string}>}) {
+    const { id } = await params // Lo hacemos ocon await por qur next funciona por streaming 
     const product = await getProductById(+id) // Le pasamos el id como number por el modelo del Schema
 
   return (

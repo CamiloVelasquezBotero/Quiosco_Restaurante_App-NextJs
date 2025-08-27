@@ -28,7 +28,7 @@ async function getProducts(page:number, pageSize:number) {
 // Creamos un type que hace que TS haga todo el trabajo pesado por nosotros y depende a lo que obtiene construye el type
 export type ProductsWithCategory = Awaited<ReturnType<typeof getProducts>>
 
-export default async function ProductsPage({searchParams}:{searchParams: {page: string}}) {
+export default async function ProductsPage({searchParams}:{searchParams: Promise<{page: string}>}) {
 
   const params = await searchParams // Desde la version 14.2, (searchParams) ya no es un objeto plano y hay que instanciarlo primero con await ya que funciona por streming
   const page = +params.page || 1 // Si no tenemos Query, entonces desde la pagina 1

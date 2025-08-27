@@ -1,10 +1,9 @@
 "use client"
 import { productSchema } from "@/src/schemaZod";
 import { toast } from "react-toastify";
-import { createProduct } from "@/actions/create-product-action";
 import { useRouter } from "next/navigation";
 import { updateProduct } from "@/actions/update-product-action";
-import { useParams } from 'next/navigation'
+import { useParams } from 'next/navigation';
 
 export default function EditProductForm({children}:{children: React.ReactNode}) {
     const router = useRouter() // Como estamos en el cliente usamos (useRouter) y en ves de (redirect) que es solo para el servidor

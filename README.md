@@ -11,11 +11,12 @@ Esta app esta pensada para un restaurante con pantallas tactiles para hacer el p
   - TailwindCss
   - Zod
   - Zustand
+  - SWR
   - Heroicons
   - CSS
   - Html
   - Hecho con Next
 
-### PREVIEW: 
+### PREVIEW: https://quiosco-restaurante-app-next-1vx8k809r.vercel.app/
 
 Nota del Preview: La API esta  en un host de hobbie, por lo cual la primera peticion, puede durar alrededor de 50 seg mientras se habilita
