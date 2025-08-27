@@ -18,5 +18,8 @@ Esta app esta pensada para un restaurante con pantallas tactiles para hacer el p
   - Hecho con Next
 
 ### PREVIEW: https://quiosco-restaurante-app-next-1vx8k809r.vercel.app/
+Rutas: '/'   ---> // Ruta principal ordenar pedido
+Rutas: '/admin/orders'   ---> // Pedidos que llegan a cocina en tiempo real
+Rutas: '/orders'   ---> // Pantalla de para los usuarios cuando ya esta listo su pedido
 
 Nota del Preview: La API esta  en un host de hobbie, por lo cual la primera peticion, puede durar alrededor de 50 seg mientras se habilita
