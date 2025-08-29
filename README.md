@@ -17,7 +17,7 @@ Esta app esta pensada para un restaurante con pantallas tactiles para hacer el p
   - Html
   - Hecho con Next
 
-### PREVIEW: https://quiosco-restaurante-app-next-1vx8k809r.vercel.app/
+### PREVIEW: [https://quiosco-restaurante-app-next-1vx8k809r.vercel.app/](https://quiosco-restaurante-app-next-js.vercel.app/order/cafe)
 Rutas: '/'   ---> // Ruta principal ordenar pedido
 Rutas: '/admin/orders'   ---> // Pedidos que llegan a cocina en tiempo real
 Rutas: '/orders'   ---> // Pantalla de para los usuarios cuando ya esta listo su pedido
